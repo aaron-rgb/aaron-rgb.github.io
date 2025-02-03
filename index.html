@@ -47,7 +47,7 @@
             <img src="mocha.gif" alt="Valentine GIF" width="300">
         </div>
         <div class="buttons">
-            <button id="yesButton" onclick="alert('Yay! ❤️')">Yes</button>
+            <button id="yesButton" onclick="goToYayPage()">Yes</button>
             <button id="noButton" onclick="moveNoButton()">No</button>
         </div>
     </div>
@@ -60,6 +60,19 @@
             button.style.position = 'absolute';
             button.style.left = x + "px";
             button.style.top = y + "px";
+        }
+
+        function goToYayPage() {
+            document.body.innerHTML = `
+                <div class="container">
+                    <h1 style="font-size: 3em; color: pink;">YAYYYYYY!!!</h1>
+                    <div class="gif-container">
+                        <img src="your-gif-url.gif" alt="Valentine GIF" width="300">
+                    </div>
+                </div>
+            `;
+            document.body.style.background = "url('your-background-image.jpg') no-repeat center center fixed";
+            document.body.style.backgroundSize = "cover";
         }
     </script>
 </body>
