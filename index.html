@@ -47,7 +47,7 @@
             <img src="mocha.gif" alt="Valentine GIF" width="300">
         </div>
         <div class="buttons">
-            <button id="yesButton" onclick="alert('Yay! ❤️')">Yes</button>
+            <button id="yesButton" onclick="increaseYesButton()">Yes</button>
             <button id="noButton" onclick="moveNoButton()">No</button>
         </div>
     </div>
@@ -60,6 +60,13 @@
             button.style.position = 'absolute';
             button.style.left = x + "px";
             button.style.top = y + "px";
+        }
+        
+        function increaseYesButton() {
+            let yesButton = document.getElementById("yesButton");
+            let currentSize = parseInt(window.getComputedStyle(yesButton).fontSize);
+            yesButton.style.fontSize = (currentSize + 5) + "px";
+            yesButton.style.padding = (parseInt(yesButton.style.padding) + 5) + "px";
         }
     </script>
 </body>
